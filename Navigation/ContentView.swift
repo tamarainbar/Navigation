@@ -10,13 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            VStack (spacing: 20) {
+            VStack (spacing: 60) {
                 Text("Main page 📄")
                 NavigationLink(destination: Second_View()) {
-                    Text("Click Here")
+                    Text("About")
                 }
                 NavigationLink(destination: Third_View()) {
-                    Text("No Click Here")
+                    Text("Contact")
+                }
+                NavigationLink(destination: Forth_View()) {
+                    Text("Help")
                 }
             }
             .navigationTitle("Home")
