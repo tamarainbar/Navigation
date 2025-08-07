@@ -10,11 +10,19 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            Text("Main page 📄")
-            NavigationLink(destination: Text("Side page 🥸")) {
-                Text("Click Here")
+            VStack (spacing: 20) {
+                Text("Main page 📄")
+                NavigationLink(destination: Second_View()) {
+                    Text("Click Here")
+                }
+                NavigationLink(destination: Third_View()) {
+                    Text("No Click Here")
+                }
             }
-
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
+            
         }
     }
 }
